@@ -1,30 +1,28 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 
-const todos = [
+export const todos = [
   {
     item: "Learn all of coding",
     completed: false,
-    id: new Date().getTime()
+    id: 1
   },
   {
     item: "Build amazing app",
     completed: false,
-    id: new Date().getTime()
+    id: 2
   },
   {
     item: "Defeat Zuckerberg",
     completed: false,
-    id: new Date().getTime()
+    id: 3
   },
   {
     item: "Rule Earth",
     completed: false,
-    id: new Date().getTime()
+    id: 4
   }
 ];
 
-export const [todosState] = useState(todos);
-
-export const TodoReducer = (state, action) => {
-  return state;
+export const reducer = (state, action) => {
+  return {};
 };
