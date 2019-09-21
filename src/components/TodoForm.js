@@ -11,6 +11,7 @@ const TodoForm = ({ dispatch }) => {
         type: "ADD_ITEM",
         payload: { item: itemText, completed: false, id: new Date().getTime() }
       });
+      setItemText("");
     }
   };
 
