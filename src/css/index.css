@@ -81,3 +81,15 @@ body .todo-item:hover {
   background-color: #d4ebf2;
   color: #0077ea;
 }
+html .completed,
+body .completed {
+  background-color: #ccc;
+  color: #333;
+  text-decoration: line-through;
+}
+html .completed:hover,
+body .completed:hover {
+  background-color: #ccc;
+  color: #333;
+  text-decoration: line-through;
+}

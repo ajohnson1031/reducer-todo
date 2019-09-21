@@ -1,11 +1,10 @@
 import React from "react";
-import { dispatch } from "reducers/reducer";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, dispatch }) => {
   return (
     <div
-      className="todo-item"
-      onClick={e =>
+      className={`todo-item ${todo.completed === true ? "completed" : ""}`}
+      onClick={() =>
         dispatch({
           type: "TOGGLE_ITEM",
           payload: { completed: !todo.completed, id: todo.id }

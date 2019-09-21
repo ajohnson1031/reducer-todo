@@ -31,16 +31,15 @@ export const reducer = (state, action) => {
           ? (item.completed = action.payload.completed)
           : null
       );
-      return state;
+      return [...state];
     case "ADD_ITEM":
-      return { ...state, [state.length]: action.payload };
+      return [...state, action.payload];
     default:
       break;
   }
-  return state;
 };
 
-export const dispatch = action => {
-  initialState.todos = reducer(initialState.todos, action);
-  console.log(initialState);
-};
+// export const dispatch = action => {
+//   initialState.todos = reducer(initialState.todos, action);
+//   // console.log(initialState.todos);
+// };

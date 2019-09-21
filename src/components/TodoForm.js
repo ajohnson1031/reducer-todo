@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { dispatch } from "reducers/reducer";
 
-const TodoForm = () => {
+const TodoForm = ({ dispatch }) => {
   const [itemText, setItemText] = useState("");
 
   const handleClick = e => {
