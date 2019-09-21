@@ -1,0 +1,83 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+html .App,
+body .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html .App header,
+body .App header {
+  margin-bottom: 30px;
+  border-bottom: 5px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html .App header form input,
+body .App header form input {
+  font-size: 1.6rem;
+  padding: 0.2rem 20px;
+  margin-left: 15px;
+  outline: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #777;
+}
+html .App header form button,
+body .App header form button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.47rem 20px;
+  background-color: orangered;
+  border: none;
+  position: relative;
+  top: -3px;
+  outline: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+}
+html .App header form button:hover,
+body .App header form button:hover {
+  background-color: #ff6a33;
+}
+html .todo-list,
+body .todo-list {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+html .todo-item,
+body .todo-item {
+  background-color: dodgerblue;
+  width: fit-content;
+  padding: 10px 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition-duration: 0.2s;
+  user-select: none;
+  width: 200px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+html .todo-item:hover,
+body .todo-item:hover {
+  background-color: #d4ebf2;
+  color: #0077ea;
+}
