@@ -34,6 +34,8 @@ export const reducer = (state, action) => {
       return [...state];
     case "ADD_ITEM":
       return [...state, action.payload];
+    case "CLEAR_ITEMS":
+      return [...state.filter(item => item.completed === false)];
     default:
       break;
   }

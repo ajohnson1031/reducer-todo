@@ -5,13 +5,24 @@ const TodoForm = ({ dispatch }) => {
 
   const handleClick = e => {
     e.preventDefault();
-    if (itemText === "") {
-    } else {
-      dispatch({
-        type: "ADD_ITEM",
-        payload: { item: itemText, completed: false, id: new Date().getTime() }
-      });
-      setItemText("");
+
+    if (e.target.name === "add") {
+      if (itemText === "") {
+      } else {
+        dispatch({
+          type: "ADD_ITEM",
+          payload: {
+            item: itemText,
+            completed: false,
+            id: new Date().getTime()
+          }
+        });
+        setItemText("");
+      }
+    }
+
+    if (e.target.name === "clear") {
+      dispatch({ type: "CLEAR_ITEMS" });
     }
   };
 
@@ -28,8 +39,21 @@ const TodoForm = ({ dispatch }) => {
         value={itemText}
         onChange={handleChange}
       />
-      <button type="submit" onClick={handleClick}>
+      <button
+        className="add-button"
+        name="add"
+        type="submit"
+        onClick={handleClick}
+      >
         Add Item
+      </button>
+      <button
+        className="clear-button"
+        name="clear"
+        type="submit"
+        onClick={handleClick}
+      >
+        Clear
       </button>
     </form>
   );

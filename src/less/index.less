@@ -23,33 +23,41 @@ body {
 
       form {
         input {
-          font-size: 1.6rem;
+          font-size: 1.3rem;
           padding: 0.2rem 20px;
           margin-left: 15px;
           outline: none;
-          border-top-left-radius: 30px;
-          border-bottom-left-radius: 30px;
           border: 1px solid #ccc;
           background-color: #f5f5f5;
           color: #777;
         }
 
         button {
-          font-size: 1.2rem;
+          font-size: 0.9rem;
           font-weight: bold;
           color: white;
           padding: 0.47rem 20px;
-          background-color: orangered;
+          margin-left: 8px;
           border: none;
           position: relative;
           top: -3px;
           outline: none;
-          border-top-right-radius: 30px;
-          border-bottom-right-radius: 30px;
           cursor: pointer;
+        }
+
+        .add-button {
+          background-color: orangered;
 
           &:hover {
             background-color: lighten(orangered, 10%);
+          }
+        }
+
+        .clear-button {
+          background-color: seagreen;
+
+          &:hover {
+            background-color: lighten(seagreen, 10%);
           }
         }
       }
